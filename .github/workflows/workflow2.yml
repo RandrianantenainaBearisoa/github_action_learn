@@ -1,0 +1,19 @@
+name : Build and test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  Build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Build this thing
+        run: echo "Build this thing"
+  Test:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Test this thing
+        run: echo "test this thing"
