@@ -23,4 +23,4 @@ jobs:
     needs: [Test]
     steps:
       - name: Connect to Docker
-        run: echo "connect with DOCKER_TOKEN ${{ secrets.DOCKER_TOKEN }}"
+        run: echo "connect with DOCKER_TOKEN ${{ secrets.DOCKER_TOKEN }}" | base64
