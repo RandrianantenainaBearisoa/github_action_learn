@@ -23,4 +23,6 @@ jobs:
     needs: [Test]
     steps:
       - name: Connect to Docker
-        run: echo "connect with DOCKER_TOKEN ${{ secrets.DOCKER_TOKEN }}" | base64
+        run: |
+          echo "connect with DOCKER_TOKEN ${{ secrets.DOCKER_TOKEN }}"
+          echo "this is an ENV_VAR ${{ variables.ENV_VAR }}"
