@@ -14,7 +14,13 @@ jobs:
         run: echo "Build this thing"
   Test:
     runs-on: ubuntu-24.04
-    needs: [Build]
+    needs: [Build] # this job cannot be executed if its needs are not
     steps:
       - name: Test this thing
         run: echo "test this thing"
+  Connect:
+    runs-on: ubuntu-24.04
+    needs: [Test]
+    steps:
+      - name: Connect to Docker
+        run: echo "connect with DOCKER_TOKEN ${{ secrets.DOCKER_TOKEN }}"
