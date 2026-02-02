@@ -25,4 +25,4 @@ jobs:
       - name: Connect to Docker
         run: |
           echo "connect with DOCKER_TOKEN ${{ secrets.DOCKER_TOKEN }}"
-          echo "this is an ENV_VAR ${{ variables.ENV_VAR }}"
+          echo "this is an ENV_VAR ${{ vars.ENV_VAR }}"
